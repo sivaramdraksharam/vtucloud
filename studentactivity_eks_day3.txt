@@ -1,0 +1,101 @@
+### **Student Activity: Exploring Amazon EKS**
+
+Welcome to the hands-on activity session for Amazon EKS! In this session, you'll practice setting up and managing an EKS cluster on AWS. Follow the steps below to gain practical experience with EKS and Kubernetes.
+
+---
+
+### **Activity 1: Understanding EKS and Kubernetes**
+
+**Objective:** Familiarize yourself with the basic concepts of EKS and Kubernetes.
+
+1. **Research Kubernetes Basics:**
+   - Define what Kubernetes is and its primary functions.
+   - List three key components of Kubernetes (e.g., Pods, Nodes, Services).
+
+2. **Explore EKS Features:**
+   - Identify three key features of Amazon EKS.
+   - Explain how EKS integrates with AWS services like IAM and CloudWatch.
+
+3. **Compare EKS with Self-Managed Kubernetes:**
+   - List three advantages of using EKS over managing your own Kubernetes cluster.
+   - Discuss the role of the Kubernetes control plane in EKS.
+
+---
+
+### **Activity 2: Setting Up an EKS Cluster**
+
+**Objective:** Set up an EKS cluster using different methods.
+
+1. **Using AWS Management Console:**
+   - Navigate to the EKS service in the AWS Management Console.
+   - Create a new EKS cluster and configure the necessary settings (e.g., VPC, subnets).
+
+2. **Using AWS CLI:**
+   - Install and configure the AWS CLI on your machine.
+   - Use the `aws eks create-cluster` command to create an EKS cluster.
+   - Verify the cluster creation by listing clusters using `aws eks list-clusters`.
+
+3. **Using eksctl:**
+   - Install eksctl on your machine.
+   - Run the command `eksctl create cluster --name my-cluster --region us-west-2`.
+   - Confirm the cluster setup by checking the nodes with `kubectl get nodes`.
+
+---
+
+### **Activity 3: Deploying Applications on EKS**
+
+**Objective:** Deploy a sample web application on your EKS cluster.
+
+1. **Create a Kubernetes Deployment:**
+   - Write a YAML file for a simple Nginx deployment.
+   - Use `kubectl apply -f <your-deployment-file>.yaml` to deploy the application.
+
+2. **Expose the Application:**
+   - Create a Service of type LoadBalancer to expose your application.
+   - Use `kubectl expose deployment <deployment-name> --type=LoadBalancer --name=<service-name>`.
+
+3. **Access the Application:**
+   - Retrieve the external IP address of the LoadBalancer using `kubectl get services`.
+   - Open the application in your web browser using the external IP.
+
+---
+
+### **Activity 4: Scaling Applications**
+
+**Objective:** Practice scaling your application using Horizontal Pod Autoscalers.
+
+1. **Configure Horizontal Pod Autoscaler (HPA):**
+   - Create a YAML file to define an HPA for your deployment.
+   - Set the HPA to scale between 2 and 5 replicas based on CPU usage.
+
+2. **Apply the HPA Configuration:**
+   - Use `kubectl apply -f <your-hpa-file>.yaml` to apply the HPA.
+   - Monitor the scaling activity using `kubectl get hpa`.
+
+3. **Test the Scaling:**
+   - Simulate load on your application to trigger scaling.
+   - Observe the number of replicas increase or decrease based on the load.
+
+---
+
+### **Activity 5: Monitoring with CloudWatch**
+
+**Objective:** Integrate CloudWatch for monitoring your EKS cluster.
+
+1. **Enable CloudWatch Logs:**
+   - Configure your EKS cluster to send logs to CloudWatch.
+   - Verify the logs in the CloudWatch console.
+
+2. **Monitor Metrics:**
+   - Set up CloudWatch metrics for your EKS cluster.
+   - Create a dashboard to visualize CPU and memory usage.
+
+3. **Set Alarms:**
+   - Create CloudWatch alarms for critical metrics (e.g., high CPU usage).
+   - Test the alarms by simulating high resource usage.
+
+---
+
+### **Conclusion**
+
+By completing these activities, you should have a solid understanding of how to set up, deploy, scale, and monitor applications on Amazon EKS. Practice these steps regularly to become proficient in managing Kubernetes workloads on AWS. If you have any questions or need further clarification, feel free to ask!
