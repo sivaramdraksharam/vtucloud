@@ -1,0 +1,117 @@
+### Student Activity: Introduction to Microsoft Azure and AKS
+
+**Time Required: 10 minutes**
+
+---
+
+**Trainer Voice:**
+
+Welcome to the hands-on activity session for Microsoft Azure and Azure Kubernetes Service (AKS). In this activity, you'll practice setting up and using Azure and AKS by following the steps provided. Let's get started!
+
+### Activity 1: Understanding Microsoft Azure
+
+**Objective:** Familiarize yourself with the Azure platform and its basic services.
+
+**Steps:**
+
+1. **Explore Azure Services:**
+   - Visit the [Azure website](https://azure.microsoft.com) and browse through the list of available services.
+   - Identify three services that interest you and note down their primary functions.
+
+2. **Create a Free Azure Account:**
+   - Sign up for a free Azure account to explore the platform further.
+   - Note the free credits you receive and the services you can try with them.
+
+3. **Navigate the Azure Portal:**
+   - Log in to the Azure Portal and explore the dashboard.
+   - Locate the "All Services" section and search for "Virtual Machines," "Storage Accounts," and "SQL Databases."
+
+---
+
+### Activity 2: Setting Up an Azure Subscription and AKS Prerequisites
+
+**Objective:** Set up the necessary prerequisites for creating an AKS cluster.
+
+**Steps:**
+
+1. **Install Azure CLI:**
+   - Follow the instructions on the Azure website to install the Azure CLI on your machine.
+   - Verify the installation by running the command `az --version` in your terminal.
+
+2. **Create a Resource Group:**
+   - Use the Azure Portal to create a new resource group named "MyResourceGroup."
+   - Alternatively, use the Azure CLI with the command:
+     ```bash
+     az group create --name MyResourceGroup --location eastus
+     ```
+
+3. **Explore Resource Groups:**
+   - In the Azure Portal, navigate to "Resource Groups" and view the details of "MyResourceGroup."
+   - Identify the options available for managing resources within the group.
+
+---
+
+### Activity 3: Creating and Configuring an AKS Cluster
+
+**Objective:** Create and configure an AKS cluster using both the Azure Portal and Azure CLI.
+
+**Steps:**
+
+1. **Create an AKS Cluster via Azure Portal:**
+   - In the Azure Portal, search for "Kubernetes services" and click "Create."
+   - Fill in the required details, such as resource group, cluster name, and region.
+   - Choose the size and number of worker nodes, then click "Review + Create."
+
+2. **Create an AKS Cluster via Azure CLI:**
+   - Open your terminal and run the following command to create an AKS cluster:
+     ```bash
+     az aks create --resource-group MyResourceGroup --name MyAKSCluster --node-count 3 --enable-addons monitoring --generate-ssh-keys
+     ```
+
+3. **Verify AKS Cluster Creation:**
+   - In the Azure Portal, navigate to "Kubernetes services" and confirm that your AKS cluster is listed.
+   - Check the cluster's status and explore the available management options.
+
+---
+
+### Activity 4: Deploying Applications to AKS
+
+**Objective:** Deploy a sample application to your AKS cluster.
+
+**Steps:**
+
+1. **Create a Deployment YAML File:**
+   - Write a simple deployment YAML file for a sample application, such as NGINX.
+   - Include details like the container image and number of replicas.
+
+2. **Deploy the Application:**
+   - Use the command `kubectl apply -f deployment.yaml` to deploy the application to your AKS cluster.
+
+3. **Expose the Application:**
+   - Create a service to expose the application using the command:
+     ```bash
+     kubectl expose deployment myapp --type=LoadBalancer --port=80
+     ```
+
+---
+
+### Activity 5: Monitoring and Scaling AKS Workloads
+
+**Objective:** Enable monitoring and configure auto-scaling for your AKS workloads.
+
+**Steps:**
+
+1. **Enable Monitoring:**
+   - Ensure monitoring is enabled for your AKS cluster by using the `--enable-addons monitoring` flag during cluster creation.
+
+2. **Configure Horizontal Pod Autoscaler:**
+   - Use the command `kubectl autoscale deployment myapp --cpu-percent=50 --min=1 --max=10` to set up auto-scaling based on CPU usage.
+
+3. **Monitor Cluster Performance:**
+   - In the Azure Portal, navigate to "Monitor" and explore the metrics and logs for your AKS cluster.
+
+---
+
+**Conclusion:**
+
+By completing these activities, you've gained hands-on experience with Microsoft Azure and AKS. You've learned how to set up an Azure subscription, create and manage an AKS cluster, deploy applications, and monitor workloads. Keep practicing these steps to deepen your understanding and proficiency with Azure and AKS.
