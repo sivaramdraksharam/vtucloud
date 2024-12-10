@@ -1,0 +1,125 @@
+### **Student Activity: Running a Web Application on GKE, EKS, and AKS**
+
+Welcome to this hands-on activity session where you will practice deploying web applications on Google Kubernetes Engine (GKE), Amazon Elastic Kubernetes Service (EKS), and Azure Kubernetes Service (AKS). Follow the steps below to gain practical experience with each platform. This activity is designed for beginners, so take your time and explore each step thoroughly.
+
+---
+
+### **Activity 1: Understanding Differences Between GKE, EKS, and AKS**
+
+**Objective:** Familiarize yourself with the key differences between GKE, EKS, and AKS.
+
+1. **Research Integration Features:**
+   - GKE: Explore how GKE integrates with Google Cloud services like BigQuery and Cloud Storage.
+   - EKS: Investigate how EKS works with AWS services such as S3 and RDS.
+   - AKS: Look into AKS's integration with Azure services like Azure Blob Storage and Azure Monitor.
+
+2. **Explore Management Features:**
+   - GKE: Learn about GKE's automatic upgrades and scaling capabilities.
+   - EKS: Understand the level of control you have over infrastructure in EKS.
+   - AKS: Study AKS's automatic patching and scaling features.
+
+3. **Compare Pricing Models:**
+   - GKE: Calculate costs based on the number of worker nodes.
+   - EKS: Determine costs for both control plane and worker nodes.
+   - AKS: Assess pricing based on worker nodes and additional Azure services.
+
+---
+
+### **Activity 2: Key Architectural Differences and Pricing Models**
+
+**Objective:** Understand the architectural differences and pricing models of GKE, EKS, and AKS.
+
+1. **Control Plane Management:**
+   - GKE: Identify how GKE manages the control plane automatically.
+   - EKS: Explore the control you have over the EKS control plane.
+   - AKS: Examine how AKS manages the control plane for you.
+
+2. **Worker Node Costs:**
+   - GKE: Calculate costs based on node specifications.
+   - EKS: Analyze costs for both control plane and worker nodes.
+   - AKS: Determine costs based on node specifications and Azure services.
+
+3. **Infrastructure Management:**
+   - GKE: Understand the infrastructure management responsibilities.
+   - EKS: Explore the aspects of infrastructure you need to manage.
+   - AKS: Learn about the infrastructure management handled by AKS.
+
+---
+
+### **Activity 3: Migrating a Web Application Across Cloud Providers**
+
+**Objective:** Practice migrating a web application from one cloud provider to another using Kubernetes.
+
+1. **Containerize Your Application:**
+   - Use Docker to package a simple web application.
+   - Ensure the container can run on any platform (GKE, EKS, AKS).
+
+2. **Export Kubernetes Manifests:**
+   - Create YAML files to define your application's deployment and service.
+   - Ensure these manifests are portable across platforms.
+
+3. **Deploy on a New Platform:**
+   - Deploy your container and manifests on GKE.
+   - Migrate and deploy the same application on EKS.
+   - Finally, deploy the application on AKS.
+
+---
+
+### **Activity 4: Handling Cloud-Specific Services and Dependencies**
+
+**Objective:** Learn how to manage cloud-specific services when migrating applications.
+
+1. **Identify Cloud-Specific Services:**
+   - GKE: List services like Google Cloud Storage and Pub/Sub.
+   - EKS: Identify AWS services like S3 and SNS/SQS.
+   - AKS: Recognize Azure services like Blob Storage and Service Bus.
+
+2. **Use Open-Source Alternatives:**
+   - Explore MinIO as an alternative to cloud-specific object storage.
+   - Investigate RabbitMQ for messaging instead of cloud-specific services.
+
+3. **Abstract the Service Layer:**
+   - Create an abstraction layer in your application to switch between services.
+   - Test the application with different cloud services based on the environment.
+
+---
+
+### **Activity 5: Best Practices for Multi-Cloud Kubernetes Deployment**
+
+**Objective:** Implement best practices for deploying Kubernetes across multiple cloud providers.
+
+1. **Centralized CI/CD Pipeline:**
+   - Set up a Jenkins pipeline to manage deployments on GKE, EKS, and AKS.
+   - Use GitLab CI/CD to automate deployments across all platforms.
+
+2. **Standardize Kubernetes Manifests:**
+   - Ensure the same Kubernetes manifests are used across all platforms.
+   - Validate consistency in deployment configurations.
+
+3. **Monitor Across Platforms:**
+   - Use Prometheus to monitor applications on GKE, EKS, and AKS.
+   - Visualize metrics with Grafana for a centralized view.
+
+---
+
+### **Activity 6: Strategies for Disaster Recovery and Failover**
+
+**Objective:** Develop strategies for disaster recovery and failover in a multi-cloud setup.
+
+1. **Active-Active Setup:**
+   - Deploy your application on multiple cloud providers simultaneously.
+   - Test failover capabilities by simulating a provider outage.
+
+2. **Backup and Restore:**
+   - Regularly back up application data in a cloud-agnostic format.
+   - Practice restoring data on a different cloud provider.
+
+3. **Automated Failover:**
+   - Use Kubernetes Federation to automate failover between providers.
+   - Explore Crossplane for managing resources across clouds.
+
+---
+
+### **Conclusion**
+
+By completing these activities, you should have a practical understanding of deploying and managing web applications on GKE, EKS, and AKS. You have explored key differences, migration strategies, and best practices for multi-cloud deployments. Continue experimenting with these platforms to deepen your knowledge and skills in Kubernetes.
