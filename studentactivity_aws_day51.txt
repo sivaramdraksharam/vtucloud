@@ -1,0 +1,165 @@
+Day_51
+------
+### **Student Activity: AWS Account Creation and Introduction to IAM**
+
+---
+
+**Objective:** This activity is designed to help students understand and practice the basics of AWS account creation and IAM management. By the end of this activity, students should be able to create an AWS account, set up IAM users, groups, and roles, and apply IAM policies.
+
+---
+
+### **Activity 1: Setting Up an AWS Account**
+
+**Task:** Create an AWS Free-Tier account.
+
+**Steps:**
+
+1. **Visit the AWS Website:**
+   - Go to [aws.amazon.com](https://aws.amazon.com).
+   - Click on "Create an AWS Account."
+
+2. **Enter Your Email and Password:**
+   - Provide a valid email address.
+   - Create a strong password.
+
+3. **Provide Contact Information:**
+   - Enter your name, address, and phone number.
+
+4. **Choose the Free Tier:**
+   - Select the Free Tier option to explore AWS services for free for 12 months.
+
+5. **Enter Payment Information:**
+   - Provide a credit or debit card for verification.
+
+6. **Identity Verification:**
+   - Enter the verification code sent to your phone.
+
+7. **Select a Support Plan:**
+   - Choose the Basic Support Plan.
+
+8. **Complete the Setup:**
+   - Finish the setup to start using AWS services.
+
+**Examples:**
+
+- Example 1: Create an account using a personal email.
+- Example 2: Use a different email provider to create another account.
+- Example 3: Set up an account with a family member's email for practice.
+
+---
+
+### **Activity 2: Billing Management and Cost Control**
+
+**Task:** Set up billing alerts and budgets.
+
+**Steps:**
+
+1. **Log in to the AWS Management Console:**
+   - Use your root account credentials.
+
+2. **Navigate to Billing Dashboard:**
+   - Search for "Billing" in the AWS Management Console.
+
+3. **Set Up a Budget:**
+   - Click on "Budgets" and create a new budget.
+   - Define a monthly budget limit.
+
+4. **Create Billing Alerts:**
+   - Set up alerts to notify you when your usage exceeds a certain threshold.
+
+**Examples:**
+
+- Example 1: Set a budget of $10 and create an alert for 80% usage.
+- Example 2: Create a budget for a specific service, like EC2.
+- Example 3: Set up a budget for the entire account and receive email notifications.
+
+---
+
+### **Activity 3: Introduction to IAM**
+
+**Task:** Understand IAM components and create IAM users.
+
+**Steps:**
+
+1. **Log in to the AWS Management Console:**
+   - Use your root account credentials.
+
+2. **Navigate to IAM:**
+   - Search for "IAM" and click on the service.
+
+3. **Create a New User:**
+   - Click on "Users" and then "Add user."
+   - Enter a username and select the type of access.
+
+4. **Assign Permissions:**
+   - Attach existing policies directly to the user.
+
+5. **Review and Create:**
+   - Review the user’s details and click "Create user."
+
+**Examples:**
+
+- Example 1: Create a user with programmatic access for API usage.
+- Example 2: Create a user with AWS Management Console access for a team member.
+- Example 3: Create a user with limited access to specific services like S3.
+
+---
+
+### **Activity 4: Using IAM Policies to Control Access**
+
+**Task:** Create and apply IAM policies.
+
+**Steps:**
+
+1. **Navigate to IAM Policies:**
+   - In the IAM dashboard, click on "Policies."
+
+2. **Create a New Policy:**
+   - Click "Create policy" and use the visual editor or JSON editor.
+
+3. **Define Policy Permissions:**
+   - Specify actions and resources in the policy.
+
+4. **Attach Policy to User/Group/Role:**
+   - Assign the policy to a user, group, or role.
+
+**Examples:**
+
+- Example 1: Create a policy that allows read-only access to S3 buckets.
+- Example 2: Create a policy that allows EC2 instance management.
+- Example 3: Create a policy that denies access to delete resources.
+
+---
+
+### **Activity 5: Best Practices for Securing Your AWS Account**
+
+**Task:** Implement security best practices.
+
+**Steps:**
+
+1. **Enable Multi-Factor Authentication (MFA):**
+   - Go to the IAM dashboard and enable MFA for your root account.
+
+2. **Review User Permissions:**
+   - Regularly audit user permissions and remove unnecessary access.
+
+3. **Monitor Account Activity:**
+   - Use AWS CloudTrail to track user activity and access logs.
+
+**Examples:**
+
+- Example 1: Enable MFA for a newly created IAM user.
+- Example 2: Review and adjust permissions for a group of users.
+- Example 3: Set up CloudTrail to monitor API calls and user actions.
+
+---
+
+### **Conclusion**
+
+Through these activities, students will gain hands-on experience with AWS account creation, IAM management, and security best practices. By practicing these steps, students will be better prepared to manage AWS resources securely and efficiently.
+
+---
+
+### **Next Steps**
+
+In the next session, students will explore specific AWS services and learn how to use IAM roles for applications.
