@@ -1,0 +1,97 @@
+### Student Activity: Exploring Amazon Simple Storage Service (S3)
+
+Welcome to this hands-on activity designed to help you understand and practice using Amazon S3. By the end of this activity, you will have a practical understanding of S3's key concepts, use cases, and operations. Let's dive in!
+
+---
+
+### Activity 1: Understanding Key Concepts in S3
+
+#### Task 1: Buckets
+
+- **Example 1**: Create a bucket named `student-projects-2023`. Ensure the name is unique across all AWS accounts.
+- **Example 2**: Create another bucket named `backup-storage-2023` in a different region, such as `us-west-2`.
+- **Example 3**: List all the buckets you have created in your AWS account using the AWS Management Console.
+
+#### Task 2: Objects
+
+- **Example 1**: Upload a text file named `notes.txt` to the `student-projects-2023` bucket.
+- **Example 2**: Upload an image file named `profile.jpg` to the `backup-storage-2023` bucket.
+- **Example 3**: Upload a video file named `presentation.mp4` to the `student-projects-2023` bucket.
+
+#### Task 3: Keys
+
+- **Example 1**: Identify the key for the `notes.txt` file in the `student-projects-2023` bucket.
+- **Example 2**: Identify the key for the `profile.jpg` file in the `backup-storage-2023` bucket.
+- **Example 3**: Identify the key for the `presentation.mp4` file in the `student-projects-2023` bucket.
+
+---
+
+### Activity 2: Exploring S3 Use Cases
+
+#### Task 1: Backup and Restore
+
+- **Example 1**: Use the `backup-storage-2023` bucket to store a backup of your local project files.
+- **Example 2**: Restore a file from the `backup-storage-2023` bucket to your local machine.
+- **Example 3**: Schedule regular backups of your important documents to the `backup-storage-2023` bucket.
+
+#### Task 2: Data Archiving
+
+- **Example 1**: Move old project files to the `Glacier` storage class for long-term archiving.
+- **Example 2**: Archive a large dataset that you rarely access to the `Glacier Deep Archive` storage class.
+- **Example 3**: Retrieve an archived file from the `Glacier` storage class and note the retrieval time.
+
+#### Task 3: Content Distribution
+
+- **Example 1**: Store website images in the `student-projects-2023` bucket for fast access.
+- **Example 2**: Use S3 to host static content for a simple web application.
+- **Example 3**: Distribute a video file stored in S3 to multiple users simultaneously.
+
+---
+
+### Activity 3: Managing S3 Storage Classes
+
+#### Task 1: S3 Standard
+
+- **Example 1**: Store frequently accessed documents in the `S3 Standard` storage class.
+- **Example 2**: Analyze the cost of storing files in the `S3 Standard` class compared to other classes.
+- **Example 3**: Monitor the access patterns of files stored in the `S3 Standard` class.
+
+#### Task 2: S3 Intelligent-Tiering
+
+- **Example 1**: Enable `Intelligent-Tiering` for a bucket to automatically manage data access tiers.
+- **Example 2**: Track cost savings achieved by using `Intelligent-Tiering`.
+- **Example 3**: Move a frequently accessed file to `Intelligent-Tiering` and observe any changes in access patterns.
+
+#### Task 3: S3 Glacier
+
+- **Example 1**: Archive a set of old project files to the `Glacier` storage class.
+- **Example 2**: Calculate the cost difference between storing files in `Glacier` and `S3 Standard`.
+- **Example 3**: Retrieve a file from `Glacier` and document the retrieval process.
+
+---
+
+### Activity 4: Hands-On Practice with S3 Operations
+
+#### Task 1: Creating and Configuring Buckets
+
+- **Example 1**: Create a bucket named `my-first-s3-bucket` in the `Mumbai` region.
+- **Example 2**: Configure the bucket to allow public read access for a specific file.
+- **Example 3**: Set up versioning for the `my-first-s3-bucket` to keep track of file changes.
+
+#### Task 2: Uploading and Downloading Files
+
+- **Example 1**: Upload a PDF document to the `my-first-s3-bucket` using the AWS CLI.
+- **Example 2**: Download the uploaded PDF document to your local machine.
+- **Example 3**: Use an AWS SDK to programmatically upload a file to the `my-first-s3-bucket`.
+
+#### Task 3: Managing Permissions
+
+- **Example 1**: Set permissions to allow only specific users to access a file in your bucket.
+- **Example 2**: Create a bucket policy to restrict access based on IP address.
+- **Example 3**: Use IAM roles to manage access to your S3 buckets for different users.
+
+---
+
+### Conclusion
+
+By completing these activities, you should have a solid understanding of Amazon S3's key concepts, use cases, and operations. Practice these tasks regularly to become proficient in using S3 for your cloud storage needs. If you have any questions or need further assistance, feel free to reach out!
