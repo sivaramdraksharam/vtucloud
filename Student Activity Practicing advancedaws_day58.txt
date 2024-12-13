@@ -1,0 +1,154 @@
+### Student Activity: Practicing Amazon S3 Advanced Features
+
+Welcome to the hands-on session where you'll practice implementing some of the advanced features of Amazon S3. This activity is designed to help you understand and apply concepts such as bucket policies, versioning, lifecycle management, encryption, cross-region replication, and transfer acceleration. Follow the steps below to gain practical experience with these features.
+
+---
+
+### **Activity 1: Bucket Policies and Access Control**
+
+#### **Objective**: Learn how to set bucket policies to control access to your S3 buckets.
+
+1. **Create a Bucket**:
+   - Go to the S3 console and create a new bucket named `my-bucket-policy-example`.
+
+2. **Set a Bucket Policy for Read-Only Access**:
+   - Under the **Permissions** tab, add a bucket policy that allows read-only access to a specific IAM user.
+   - Example Policy:
+     ```json
+     {
+       "Version": "2012-10-17",
+       "Statement": [
+         {
+           "Effect": "Allow",
+           "Principal": {"AWS": "arn:aws:iam::123456789012:user/ReadOnlyUser"},
+           "Action": "s3:GetObject",
+           "Resource": "arn:aws:s3:::my-bucket-policy-example/*"
+         }
+       ]
+     }
+     ```
+
+3. **Set a Bucket Policy for Write Access**:
+   - Modify the bucket policy to allow another IAM user to upload files.
+   - Example Policy:
+     ```json
+     {
+       "Version": "2012-10-17",
+       "Statement": [
+         {
+           "Effect": "Allow",
+           "Principal": {"AWS": "arn:aws:iam::123456789012:user/WriteUser"},
+           "Action": "s3:PutObject",
+           "Resource": "arn:aws:s3:::my-bucket-policy-example/*"
+         }
+       ]
+     }
+     ```
+
+4. **Set a Bucket Policy for Public Access**:
+   - Add a policy to make the bucket publicly accessible for reading.
+   - Example Policy:
+     ```json
+     {
+       "Version": "2012-10-17",
+       "Statement": [
+         {
+           "Effect": "Allow",
+           "Principal": "*",
+           "Action": "s3:GetObject",
+           "Resource": "arn:aws:s3:::my-bucket-policy-example/*"
+         }
+       ]
+     }
+     ```
+
+---
+
+### **Activity 2: Versioning and Lifecycle Management**
+
+#### **Objective**: Enable versioning and set lifecycle rules to manage data efficiently.
+
+1. **Enable Versioning**:
+   - In the S3 console, select your bucket `my-versioning-example`.
+   - Go to the **Properties** tab and enable versioning.
+
+2. **Upload Multiple Versions**:
+   - Upload a file named `document.txt` to the bucket.
+   - Modify the file locally and upload it again to create a new version.
+   - Repeat to create at least three versions.
+
+3. **Set a Lifecycle Rule for Transition**:
+   - Go to the **Management** tab and create a lifecycle rule to move objects to the Glacier storage class after 30 days.
+   - Example Rule:
+     - Transition to Glacier after 30 days.
+
+4. **Set a Lifecycle Rule for Expiration**:
+   - Create another rule to delete objects after 365 days.
+   - Example Rule:
+     - Expire current versions after 365 days.
+
+5. **Set a Lifecycle Rule for Noncurrent Version Expiration**:
+   - Create a rule to delete noncurrent versions after 90 days.
+   - Example Rule:
+     - Expire noncurrent versions after 90 days.
+
+---
+
+### **Activity 3: S3 Encryption and Data Protection**
+
+#### **Objective**: Implement encryption to protect your data in S3.
+
+1. **Enable Server-Side Encryption (SSE-S3)**:
+   - In the S3 console, select your bucket `my-encryption-example`.
+   - Go to the **Properties** tab and enable server-side encryption with S3-managed keys (SSE-S3).
+
+2. **Enable Server-Side Encryption with AWS KMS (SSE-KMS)**:
+   - Enable server-side encryption with AWS Key Management Service (KMS).
+   - Choose an existing KMS key or create a new one.
+
+3. **Implement Client-Side Encryption**:
+   - Use the AWS SDK to encrypt data on the client-side before uploading it to S3.
+   - Example Code (Python):
+     ```python
+     import boto3
+     from cryptography.fernet import Fernet
+
+     # Generate a key for encryption
+     key = Fernet.generate_key()
+     cipher = Fernet(key)
+
+     # Encrypt data
+     data = b"Sensitive data"
+     encrypted_data = cipher.encrypt(data)
+
+     # Upload encrypted data to S3
+     s3 = boto3.client('s3')
+     s3.put_object(Bucket='my-encryption-example', Key='encrypted-data.txt', Body=encrypted_data)
+     ```
+
+---
+
+### **Activity 4: Cross-Region Replication and Transfer Acceleration**
+
+#### **Objective**: Set up cross-region replication and enable transfer acceleration.
+
+1. **Set Up Cross-Region Replication**:
+   - Create a destination bucket in a different region named `my-replication-destination`.
+   - Enable versioning on both the source (`my-replication-source`) and destination buckets.
+   - Set up a replication rule to replicate objects from the source to the destination bucket.
+
+2. **Enable Transfer Acceleration**:
+   - In the S3 console, select your bucket `my-transfer-acceleration-example`.
+   - Go to the **Properties** tab and enable transfer acceleration.
+   - Use the accelerated endpoint to upload a large file and observe the speed improvement.
+
+3. **Test Cross-Region Replication**:
+   - Upload a file to the source bucket and verify that it appears in the destination bucket.
+
+---
+
+### **Conclusion**
+
+By completing these activities, you have practiced implementing key features of Amazon S3, including bucket policies, versioning, lifecycle management, encryption, cross-region replication, and transfer acceleration. These skills will help you manage and secure your data effectively in the cloud.
+
+Feel free to explore further and experiment with different configurations to deepen your understanding of Amazon S3. If you have any questions or need assistance, don't hesitate to ask!
