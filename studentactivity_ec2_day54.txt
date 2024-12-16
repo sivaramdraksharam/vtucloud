@@ -1,0 +1,104 @@
+### Student Activity: Hands-On with Amazon EC2
+
+Welcome to the hands-on activity session for Amazon EC2! In this activity, you will practice launching, configuring, and connecting to EC2 instances. Follow the steps below to gain practical experience with EC2.
+
+---
+
+### **Activity 1: Understanding EC2 Basics**
+
+1. **What is EC2?**
+   - **Example 1**: Use EC2 to host a personal blog using WordPress.
+   - **Example 2**: Deploy a Node.js application on an EC2 instance.
+   - **Example 3**: Run a Python script for data analysis on an EC2 instance.
+
+2. **Key Concepts and Benefits of EC2**
+   - **Elasticity**: Scale your web application during peak traffic.
+   - **Pay-as-you-go**: Run a development server for a few hours and only pay for that time.
+   - **Global Reach**: Deploy an application in the US and Europe to serve users in both regions.
+
+---
+
+### **Activity 2: Exploring EC2 Instance Types**
+
+1. **General Purpose Instances**
+   - **Example 1**: Launch a t3.micro instance for a small web server.
+   - **Example 2**: Use a t2.medium instance for a development environment.
+   - **Example 3**: Deploy a small database on a t3.small instance.
+
+2. **Compute-Optimized Instances**
+   - **Example 1**: Run a machine learning model on a c5.large instance.
+   - **Example 2**: Host a gaming server on a c5.xlarge instance.
+   - **Example 3**: Perform scientific computations on a c5.2xlarge instance.
+
+3. **Memory-Optimized Instances**
+   - **Example 1**: Host a large database on an r5.large instance.
+   - **Example 2**: Run an in-memory cache on an r5.xlarge instance.
+   - **Example 3**: Deploy a high-performance computing application on an r5.2xlarge instance.
+
+4. **Storage-Optimized Instances**
+   - **Example 1**: Process big data on an i3.large instance.
+   - **Example 2**: Run a data warehousing application on an i3.xlarge instance.
+   - **Example 3**: Use an i3.2xlarge instance for high-speed data processing.
+
+---
+
+### **Activity 3: Exploring EC2 Pricing Models**
+
+1. **On-Demand Instances**
+   - **Example 1**: Launch a temporary test server for a few hours.
+   - **Example 2**: Run a short-term project without long-term commitments.
+   - **Example 3**: Deploy a demo application for a client presentation.
+
+2. **Reserved Instances**
+   - **Example 1**: Commit to a 1-year term for a production web server.
+   - **Example 2**: Reserve an instance for a database server with predictable usage.
+   - **Example 3**: Use reserved instances for a steady-state application.
+
+3. **Spot Instances**
+   - **Example 1**: Run batch processing jobs with flexible timing.
+   - **Example 2**: Perform data analysis tasks that can be interrupted.
+   - **Example 3**: Use spot instances for rendering tasks in animation projects.
+
+---
+
+### **Activity 4: Launching and Connecting to an EC2 Instance**
+
+1. **Launching an EC2 Instance**
+   - **Example 1**: Choose an Amazon Linux 2 AMI and launch a t3.micro instance.
+   - **Example 2**: Select a Windows Server AMI and launch a t2.medium instance.
+   - **Example 3**: Use a custom AMI to launch a c5.large instance.
+
+2. **Configuring Security Groups and Key Pairs**
+   - **Example 1**: Create a security group allowing SSH access on port 22.
+   - **Example 2**: Set up a security group for HTTP access on port 80.
+   - **Example 3**: Generate a new key pair for secure SSH access.
+
+3. **Connecting to an EC2 Instance**
+   - **Example 1**: Connect to a Linux instance using SSH with a .pem key file.
+   - **Example 2**: Access a Windows instance using RDP with a downloaded RDP file.
+   - **Example 3**: Use a terminal to SSH into an instance and install software.
+
+---
+
+### **Activity 5: Managing EC2 Instance Storage**
+
+1. **EBS vs Instance Store**
+   - **Example 1**: Attach an EBS volume to an instance for persistent storage.
+   - **Example 2**: Use instance store for temporary data processing.
+   - **Example 3**: Detach and reattach an EBS volume to another instance.
+
+2. **Adding and Resizing EBS Volumes**
+   - **Example 1**: Add a new EBS volume to an existing instance.
+   - **Example 2**: Resize an EBS volume to accommodate more data.
+   - **Example 3**: Create a snapshot of an EBS volume for backup.
+
+3. **Backing Up Data with EBS Snapshots**
+   - **Example 1**: Create a snapshot of a critical database volume.
+   - **Example 2**: Use a snapshot to restore data to a new volume.
+   - **Example 3**: Copy a snapshot to another region for disaster recovery.
+
+---
+
+### **Conclusion**
+
+By completing these activities, you should now have a practical understanding of Amazon EC2, including launching instances, configuring security, and managing storage. Practice these steps regularly to become proficient in using EC2 for your cloud computing needs. If you have any questions or need further assistance, feel free to ask!
