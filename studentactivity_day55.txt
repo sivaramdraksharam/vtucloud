@@ -1,0 +1,129 @@
+### **Student Activity: Hands-On Practice with EC2 Monitoring and Management Using Amazon CloudWatch**
+
+---
+
+Welcome to the hands-on activity session! In this activity, you will practice setting up and managing EC2 instances using Amazon CloudWatch. Follow the steps below to gain practical experience with the concepts discussed in the session.
+
+---
+
+### **Activity 1: Monitoring EC2 Instances with CloudWatch**
+
+**Objective:** Learn how to monitor key metrics of your EC2 instances using CloudWatch.
+
+**Steps:**
+
+1. **Launch an EC2 Instance:**
+   - Go to the AWS Management Console.
+   - Navigate to the EC2 dashboard.
+   - Launch a new EC2 instance using the Amazon Linux 2 AMI.
+   - Choose an instance type (e.g., t2.micro) and configure the instance details.
+   - Review and launch the instance.
+
+2. **Access CloudWatch Metrics:**
+   - Go to the CloudWatch dashboard.
+   - Select "Metrics" from the left-hand menu.
+   - Choose "EC2" to view metrics related to your instances.
+   - Observe metrics such as CPU Utilization, Network In, and Network Out.
+
+3. **Example Metrics to Monitor:**
+   - **Example 1:** Monitor CPU Utilization to ensure your instance is not under heavy load.
+   - **Example 2:** Monitor Network In/Out to track data transfer rates.
+   - **Example 3:** Monitor Disk Read/Write Operations to understand disk usage patterns.
+
+---
+
+### **Activity 2: Setting Up Custom CloudWatch Metrics and Alarms**
+
+**Objective:** Create custom metrics and set up alarms to get notified when specific thresholds are crossed.
+
+**Steps:**
+
+1. **Create a Custom Metric for Memory Usage:**
+   - Install the CloudWatch agent on your EC2 instance.
+   - Configure the agent to collect memory usage data.
+   - Publish the memory usage data as a custom metric to CloudWatch.
+
+2. **Set Up an Alarm for Memory Usage:**
+   - Go to the CloudWatch dashboard.
+   - Select "Alarms" from the left-hand menu.
+   - Create a new alarm for the custom memory usage metric.
+   - Set a threshold (e.g., memory usage above 80%) and configure notifications.
+
+3. **Example Alarms to Set Up:**
+   - **Example 1:** Alarm for CPU Utilization above 70%.
+   - **Example 2:** Alarm for Network In exceeding 500 MB.
+   - **Example 3:** Alarm for Disk Space Usage above 90%.
+
+---
+
+### **Activity 3: Scaling EC2 Instances**
+
+**Objective:** Practice scaling your EC2 instances to handle varying loads.
+
+**Steps:**
+
+1. **Set Up Auto Scaling:**
+   - Go to the EC2 dashboard.
+   - Create an Auto Scaling group for your instance.
+   - Define scaling policies based on CPU utilization (e.g., add an instance when CPU utilization is above 80%).
+
+2. **Test Auto Scaling:**
+   - Simulate a load on your instance to trigger the scaling policy.
+   - Observe the Auto Scaling group adding or removing instances based on the load.
+
+3. **Example Scaling Scenarios:**
+   - **Example 1:** Scale up when CPU utilization exceeds 75%.
+   - **Example 2:** Scale down when CPU utilization drops below 30%.
+   - **Example 3:** Scale based on Network In/Out thresholds.
+
+---
+
+### **Activity 4: Securing EC2 Instances**
+
+**Objective:** Implement security best practices for your EC2 instances.
+
+**Steps:**
+
+1. **Configure Security Groups:**
+   - Go to the EC2 dashboard.
+   - Select your instance and navigate to the "Security" tab.
+   - Edit the security group to allow only necessary inbound and outbound traffic.
+
+2. **Apply IAM Roles:**
+   - Create an IAM role with specific permissions.
+   - Attach the IAM role to your EC2 instance to control access.
+
+3. **Example Security Configurations:**
+   - **Example 1:** Allow SSH access only from specific IP addresses.
+   - **Example 2:** Restrict outbound traffic to specific ports.
+   - **Example 3:** Use IAM roles to grant S3 access to your instance.
+
+---
+
+### **Activity 5: Creating and Managing AMIs**
+
+**Objective:** Create AMIs for backup and recovery purposes.
+
+**Steps:**
+
+1. **Create an AMI:**
+   - Go to the EC2 dashboard.
+   - Select your instance and click on "Actions" > "Create Image."
+   - Provide a name and description for the AMI and create it.
+
+2. **Launch a New Instance from an AMI:**
+   - Go to the AMIs section in the EC2 dashboard.
+   - Select the AMI you created and launch a new instance from it.
+
+3. **Example AMI Use Cases:**
+   - **Example 1:** Create an AMI before making significant changes to your instance.
+   - **Example 2:** Use AMIs to replicate instances across different regions.
+   - **Example 3:** Maintain a library of AMIs for different application configurations.
+
+---
+
+### **Conclusion**
+
+By completing these activities, you have gained hands-on experience with monitoring and managing EC2 instances using Amazon CloudWatch. You have learned how to set up custom metrics and alarms, scale instances based on demand, secure your instances, and create AMIs for backups. These skills are essential for ensuring the smooth and efficient operation of your applications in the cloud.
+
+Feel free to explore further and experiment with different configurations to deepen your understanding. If you have any questions or need assistance, don't hesitate to ask!
