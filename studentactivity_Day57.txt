@@ -1,0 +1,165 @@
+Day 57
+--------
+### Student Activity: Practicing AWS CLI for Beginners
+
+Welcome to the hands-on activity session for learning AWS CLI. In this activity, you will practice using AWS CLI to manage AWS services like **S3**, **EC2**, and **RDS**. Follow the steps below to gain practical experience with AWS CLI commands.
+
+---
+
+### Core AWS CLI Commands for System Management
+
+Before working with specific services, ensure your AWS CLI is configured correctly.
+
+#### Activity 1: Configure AWS CLI
+
+1. **Configure AWS CLI**: Set up your AWS CLI with your credentials.
+
+   ```bash
+   aws configure
+   ```
+
+   Enter the following when prompted:
+   - AWS Access Key ID
+   - AWS Secret Access Key
+   - Default region name (e.g., `us-east-1`)
+   - Default output format (e.g., `json`)
+
+2. **Get Help**: Use the help command to understand more about AWS CLI commands.
+
+   ```bash
+   aws help
+   ```
+
+3. **List S3 Buckets**: Verify your configuration by listing all S3 buckets.
+
+   ```bash
+   aws s3 ls
+   ```
+
+---
+
+### Managing S3 with AWS CLI
+
+**Amazon S3** is a service for storing and retrieving data. Practice the following tasks to manage S3 buckets and objects.
+
+#### Activity 2: S3 Bucket Management
+
+1. **Create an S3 Bucket**: Create a new S3 bucket.
+
+   ```bash
+   aws s3 mb s3://my-unique-bucket-name
+   ```
+
+2. **Upload a File**: Upload a file to your S3 bucket.
+
+   ```bash
+   aws s3 cp myfile.txt s3://my-unique-bucket-name/
+   ```
+
+3. **Download a File**: Download a file from your S3 bucket.
+
+   ```bash
+   aws s3 cp s3://my-unique-bucket-name/myfile.txt ./
+   ```
+
+4. **Set Object Permissions**: Make a file publicly accessible.
+
+   ```bash
+   aws s3api put-object-acl --bucket my-unique-bucket-name --key myfile.txt --acl public-read
+   ```
+
+---
+
+### Managing EC2 with AWS CLI
+
+**Amazon EC2** allows you to launch and manage virtual servers. Practice the following tasks to manage EC2 instances.
+
+#### Activity 3: EC2 Instance Management
+
+1. **Launch an EC2 Instance**: Start a new EC2 instance.
+
+   ```bash
+   aws ec2 run-instances --image-id ami-12345678 --instance-type t2.micro --key-name my-key-pair --security-group-ids sg-12345678
+   ```
+
+2. **Describe Instances**: List all running EC2 instances to find their IDs.
+
+   ```bash
+   aws ec2 describe-instances
+   ```
+
+3. **Terminate an EC2 Instance**: Terminate an instance using its Instance ID.
+
+   ```bash
+   aws ec2 terminate-instances --instance-ids i-12345678
+   ```
+
+4. **Create a Key Pair**: Generate a new key pair for SSH access.
+
+   ```bash
+   aws ec2 create-key-pair --key-name my-new-key
+   ```
+
+5. **Create a Security Group**: Set up a new security group.
+
+   ```bash
+   aws ec2 create-security-group --group-name my-security-group --description "My security group"
+   ```
+
+---
+
+### Managing RDS with AWS CLI
+
+**Amazon RDS** allows you to run relational databases. Practice the following tasks to manage RDS instances.
+
+#### Activity 4: RDS Instance Management
+
+1. **Create an RDS Instance**: Launch a new RDS instance.
+
+   ```bash
+   aws rds create-db-instance --db-instance-identifier mydbinstance --db-instance-class db.t2.micro --engine mysql --master-username admin --master-user-password password123
+   ```
+
+2. **Create a DB Snapshot**: Backup your RDS instance by creating a snapshot.
+
+   ```bash
+   aws rds create-db-snapshot --db-snapshot-identifier mydbsnapshot --db-instance-identifier mydbinstance
+   ```
+
+3. **Restore from Snapshot**: Restore a database from a snapshot.
+
+   ```bash
+   aws rds restore-db-instance-from-db-snapshot --db-instance-identifier mynewdbinstance --db-snapshot-identifier mydbsnapshot
+   ```
+
+---
+
+### Hands-on Project: Build a Simple AWS System
+
+Combine your skills to build a simple AWS system.
+
+#### Activity 5: Build a Simple System
+
+1. **Create an S3 Bucket**: Store files for your project.
+
+   ```bash
+   aws s3 mb s3://my-simple-system-bucket
+   ```
+
+2. **Launch an EC2 Instance**: Set up a web server.
+
+   ```bash
+   aws ec2 run-instances --image-id ami-12345678 --instance-type t2.micro --key-name my-key-pair --security-group-ids sg-12345678
+   ```
+
+3. **Create an RDS Instance**: Set up a database for your application.
+
+   ```bash
+   aws rds create-db-instance --db-instance-identifier mydbinstance --db-instance-class db.t2.micro --engine mysql --master-username admin --master-user-password password123
+   ```
+
+---
+
+### Conclusion
+
+By completing these activities, you have practiced using AWS CLI to manage AWS services like **S3**, **EC2**, and **RDS**. Continue experimenting with different commands and configurations to deepen your understanding of AWS CLI.
