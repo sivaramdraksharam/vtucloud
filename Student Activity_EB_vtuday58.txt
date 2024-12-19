@@ -1,0 +1,142 @@
+### Student Activity: Hands-On Practice with AWS Elastic Beanstalk and EB CLI
+
+Welcome to the hands-on activity session for AWS Elastic Beanstalk (EB) and the EB CLI. This activity is designed to help you practice deploying, managing, and scaling applications using Elastic Beanstalk and its command-line interface. Follow the steps below and complete the exercises to reinforce your understanding.
+
+---
+
+### **1. Overview of Elastic Beanstalk for Deploying and Managing Applications**
+
+**Exercise 1: Explore Elastic Beanstalk Supported Platforms**
+
+- **Task**: Research and list three programming languages or frameworks supported by Elastic Beanstalk.
+- **Example**: Java, Node.js, Python
+
+**Exercise 2: Understand Elastic Beanstalk Features**
+
+- **Task**: Identify three key features of Elastic Beanstalk that simplify application deployment.
+- **Example**: Automatic scaling, integrated monitoring, easy environment management
+
+**Exercise 3: Compare Elastic Beanstalk with Traditional Hosting**
+
+- **Task**: List three differences between using Elastic Beanstalk and traditional server hosting.
+- **Example**: Managed infrastructure, automatic load balancing, simplified deployment process
+
+---
+
+### **2. What is EB CLI? Key Benefits for Developers**
+
+**Exercise 1: Identify EB CLI Benefits**
+
+- **Task**: List three benefits of using the EB CLI for managing applications.
+- **Example**: Automation of tasks, efficient command-line operations, version control
+
+**Exercise 2: Explore EB CLI Commands**
+
+- **Task**: Research and list three common EB CLI commands and their purposes.
+- **Example**: `eb init` for initializing an application, `eb create` for creating an environment, `eb deploy` for deploying an application
+
+**Exercise 3: Compare EB CLI with AWS Management Console**
+
+- **Task**: List three advantages of using the EB CLI over the AWS Management Console.
+- **Example**: Faster operations, scriptable commands, direct terminal access
+
+---
+
+### **3. Installing and Configuring EB CLI**
+
+**Exercise 1: Install AWS CLI**
+
+- **Task**: Follow the steps to install the AWS CLI on your operating system.
+- **Example**: Download the installer, run the installation, verify with `aws --version`
+
+**Exercise 2: Install EB CLI**
+
+- **Task**: Install the EB CLI using pip and verify the installation.
+- **Example**: Run `pip install awsebcli`, verify with `eb --version`
+
+**Exercise 3: Configure AWS CLI**
+
+- **Task**: Configure your AWS CLI with your credentials and default region.
+- **Example**: Run `aws configure`, enter Access Key ID, Secret Access Key, region, and output format
+
+---
+
+### **4. Configuring Elastic Beanstalk Environments and Applications via CLI**
+
+**Exercise 1: Initialize an Application**
+
+- **Task**: Use the EB CLI to initialize a new Elastic Beanstalk application.
+- **Example**: Navigate to your project directory, run `eb init`, follow prompts
+
+**Exercise 2: Create an Environment**
+
+- **Task**: Create a new environment for your application using the EB CLI.
+- **Example**: Run `eb create`, specify environment name and configuration options
+
+**Exercise 3: Explore Configuration Files**
+
+- **Task**: Examine the `.elasticbeanstalk` directory and list three configuration files created.
+- **Example**: `config.yml`, `optionsettings.json`, `saved_configs`
+
+---
+
+### **5. Managing Applications with EB CLI**
+
+**Exercise 1: Deploy an Application**
+
+- **Task**: Deploy your application to an existing environment using the EB CLI.
+- **Example**: Run `eb deploy`
+
+**Exercise 2: Check Environment Status**
+
+- **Task**: Use the EB CLI to check the status of your environment.
+- **Example**: Run `eb status`
+
+**Exercise 3: Scale Your Application**
+
+- **Task**: Scale your application to a specified number of instances.
+- **Example**: Run `eb scale 3`
+
+---
+
+### **6. Monitoring and Scaling Applications Using EB CLI Commands**
+
+**Exercise 1: Monitor Application Health**
+
+- **Task**: Use the EB CLI to monitor the health of your application.
+- **Example**: Run `eb health`
+
+**Exercise 2: Manually Scale Application**
+
+- **Task**: Manually scale your application to a different number of instances.
+- **Example**: Run `eb scale 5`
+
+**Exercise 3: Analyze Health Output**
+
+- **Task**: Analyze the output of the `eb health` command and list three key metrics.
+- **Example**: Instance status, load balancer health, application requests
+
+---
+
+### **7. Handling Environment Configurations, Logs, and Versions with EB CLI**
+
+**Exercise 1: Retrieve Logs**
+
+- **Task**: Retrieve logs from your Elastic Beanstalk instances using the EB CLI.
+- **Example**: Run `eb logs`
+
+**Exercise 2: Manage Application Versions**
+
+- **Task**: List all versions of your application and deploy a specific version.
+- **Example**: Run `eb appversion`, deploy with `eb deploy --version <version_label>`
+
+**Exercise 3: Set Environment Variables**
+
+- **Task**: Set and retrieve environment variables for your application.
+- **Example**: Run `eb setenv VAR_NAME=value`, retrieve with `eb printenv`
+
+---
+
+### **Conclusion**
+
+By completing these exercises, you should have gained practical experience in using AWS Elastic Beanstalk and the EB CLI to deploy, manage, and scale applications. These hands-on activities are designed to reinforce your understanding and help you become proficient in using these tools for cloud application management.
