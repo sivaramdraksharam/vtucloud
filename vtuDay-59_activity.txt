@@ -1,0 +1,106 @@
+### Student Activity: Hands-On Practice with AWS Serverless Application Model (SAM)
+
+Welcome to the hands-on activity session for AWS Serverless Application Model (SAM)! In this activity, you will practice building, deploying, and managing serverless applications using AWS SAM. Follow the steps and examples provided to gain practical experience with SAM.
+
+---
+
+### Activity 1: Understanding AWS SAM Concepts
+
+#### Example 1: AWS Lambda
+- **Task**: Create a simple Lambda function that returns a greeting message.
+- **Steps**:
+  1. Write a Python function that returns "Hello, AWS Lambda!".
+  2. Deploy the function using AWS SAM.
+  3. Test the function by invoking it through the AWS Management Console.
+
+#### Example 2: API Gateway
+- **Task**: Set up an API Gateway to trigger your Lambda function.
+- **Steps**:
+  1. Define an API Gateway in your SAM template.
+  2. Connect the API Gateway to your Lambda function.
+  3. Deploy the API and test it by sending an HTTP request.
+
+#### Example 3: DynamoDB
+- **Task**: Store and retrieve data using DynamoDB.
+- **Steps**:
+  1. Create a DynamoDB table using SAM.
+  2. Write a Lambda function to insert data into the table.
+  3. Write another Lambda function to retrieve data from the table.
+
+---
+
+### Activity 2: Installing and Configuring SAM CLI
+
+#### Example 1: Installing SAM CLI on macOS/Linux
+- **Task**: Install SAM CLI using Homebrew.
+- **Steps**:
+  1. Open your terminal.
+  2. Run the command to install Homebrew.
+  3. Use Homebrew to install SAM CLI.
+
+#### Example 2: Verifying SAM CLI Installation
+- **Task**: Verify that SAM CLI is installed correctly.
+- **Steps**:
+  1. Open your terminal.
+  2. Run the command `sam --version`.
+  3. Confirm that the version number is displayed.
+
+#### Example 3: Configuring AWS Credentials
+- **Task**: Configure AWS CLI with your credentials.
+- **Steps**:
+  1. Install AWS CLI if not already installed.
+  2. Run `aws configure` in your terminal.
+  3. Enter your AWS Access Key ID, Secret Access Key, Region, and Output format.
+
+---
+
+### Activity 3: Creating and Deploying Serverless Applications
+
+#### Example 1: Initializing a New SAM Application
+- **Task**: Create a new SAM application using the Hello World template.
+- **Steps**:
+  1. Run `sam init` in your terminal.
+  2. Choose Python as the runtime and the Hello World Example template.
+  3. Navigate to the project directory.
+
+#### Example 2: Building the Application
+- **Task**: Build your SAM application.
+- **Steps**:
+  1. Navigate to your SAM project directory.
+  2. Run `sam build` to compile your application.
+
+#### Example 3: Deploying the Application
+- **Task**: Deploy your SAM application to AWS.
+- **Steps**:
+  1. Run `sam deploy --guided`.
+  2. Follow the prompts to enter stack name, region, and other details.
+  3. Confirm the deployment in the AWS Management Console.
+
+---
+
+### Activity 4: Debugging and Testing Locally
+
+#### Example 1: Testing Lambda Locally
+- **Task**: Simulate a Lambda execution on your local machine.
+- **Steps**:
+  1. Run `sam local invoke "HelloWorldFunction"`.
+  2. Check the output in your terminal.
+
+#### Example 2: Testing API Gateway Locally
+- **Task**: Simulate API Gateway locally.
+- **Steps**:
+  1. Run `sam local start-api`.
+  2. Send an HTTP request to `http://127.0.0.1:3000/hello` and verify the response.
+
+#### Example 3: Debugging with Breakpoints
+- **Task**: Debug your Lambda function using breakpoints.
+- **Steps**:
+  1. Set breakpoints in your code using your IDE.
+  2. Run `sam local invoke` with debugging enabled.
+  3. Step through your code to identify issues.
+
+---
+
+### Conclusion
+
+In this activity, you practiced key concepts of AWS SAM, including Lambda, API Gateway, and DynamoDB. You also learned how to install and configure SAM CLI, create and deploy serverless applications, and test them locally. By following these examples, you should now have a solid understanding of how to work with AWS SAM. If you have any questions or need further assistance, feel free to ask!
