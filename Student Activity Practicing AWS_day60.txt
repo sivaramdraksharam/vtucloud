@@ -1,0 +1,184 @@
+### **Student Activity: Practicing AWS CLI with Templated Files**
+
+---
+
+#### **Objective**
+
+The goal of this activity is to help students gain hands-on experience with AWS CLI and templated files, specifically focusing on AWS CloudFormation and AWS SAM. By the end of this activity, students should be able to create, manage, and delete AWS resources using CloudFormation and SAM templates via the AWS CLI.
+
+---
+
+#### **Activity Overview**
+
+1. **Introduction to AWS CLI and Templated Files**
+   - Understand the basics of AWS CLI and how it interacts with AWS services.
+   - Learn about templated files in YAML or JSON format for defining AWS infrastructure.
+
+2. **Working with CloudFormation Templates**
+   - Create and manage AWS resources using CloudFormation templates.
+   - Practice deploying, updating, and deleting CloudFormation stacks.
+
+3. **Exploring SAM Templates for Serverless Applications**
+   - Define serverless resources using SAM templates.
+   - Deploy and manage serverless applications using AWS CLI and SAM CLI.
+
+---
+
+### **Part 1: Introduction to AWS CLI and Templated Files**
+
+**Example 1: Installing AWS CLI**
+
+- **Task**: Install AWS CLI on your local machine.
+- **Instructions**: Follow the official AWS documentation to install AWS CLI for your operating system.
+- **Command**: Verify the installation by running:
+  ```bash
+  aws --version
+  ```
+
+**Example 2: Configuring AWS CLI**
+
+- **Task**: Configure AWS CLI with your AWS credentials.
+- **Instructions**: Use the `aws configure` command to set up your access key, secret key, region, and output format.
+- **Command**:
+  ```bash
+  aws configure
+  ```
+
+**Example 3: Listing S3 Buckets**
+
+- **Task**: Use AWS CLI to list all S3 buckets in your account.
+- **Command**:
+  ```bash
+  aws s3 ls
+  ```
+
+---
+
+### **Part 2: Working with CloudFormation Templates**
+
+**Example 1: Creating an S3 Bucket**
+
+- **Task**: Write a CloudFormation template to create an S3 bucket.
+- **Template**:
+  ```yaml
+  Resources:
+    MyS3Bucket:
+      Type: "AWS::S3::Bucket"
+      Properties:
+        BucketName: "my-unique-bucket-name"
+  ```
+- **Command**: Deploy the stack using AWS CLI.
+  ```bash
+  aws cloudformation create-stack --stack-name MyS3Stack --template-body file://s3-template.yaml
+  ```
+
+**Example 2: Creating an EC2 Instance**
+
+- **Task**: Write a CloudFormation template to create an EC2 instance.
+- **Template**:
+  ```yaml
+  Resources:
+    MyEC2Instance:
+      Type: "AWS::EC2::Instance"
+      Properties:
+        InstanceType: "t2.micro"
+        ImageId: "ami-0abcdef1234567890"  # Replace with a valid AMI ID
+  ```
+- **Command**: Deploy the stack using AWS CLI.
+  ```bash
+  aws cloudformation create-stack --stack-name MyEC2Stack --template-body file://ec2-template.yaml
+  ```
+
+**Example 3: Updating a Stack**
+
+- **Task**: Update the S3 bucket stack to enable versioning.
+- **Template**:
+  ```yaml
+  Resources:
+    MyS3Bucket:
+      Type: "AWS::S3::Bucket"
+      Properties:
+        BucketName: "my-unique-bucket-name"
+        VersioningConfiguration:
+          Status: "Enabled"
+  ```
+- **Command**: Update the stack using AWS CLI.
+  ```bash
+  aws cloudformation update-stack --stack-name MyS3Stack --template-body file://s3-template-updated.yaml
+  ```
+
+---
+
+### **Part 3: Exploring SAM Templates for Serverless Applications**
+
+**Example 1: Creating a Simple Lambda Function**
+
+- **Task**: Write a SAM template to create a Lambda function.
+- **Template**:
+  ```yaml
+  Resources:
+    MyLambdaFunction:
+      Type: "AWS::Serverless::Function"
+      Properties:
+        Handler: index.handler
+        Runtime: nodejs14.x
+        CodeUri: ./src
+  ```
+- **Command**: Deploy the function using SAM CLI.
+  ```bash
+  sam build
+  sam deploy --guided
+  ```
+
+**Example 2: Adding an API Gateway**
+
+- **Task**: Extend the SAM template to include an API Gateway.
+- **Template**:
+  ```yaml
+  Resources:
+    MyLambdaFunction:
+      Type: "AWS::Serverless::Function"
+      Properties:
+        Handler: index.handler
+        Runtime: nodejs14.x
+        CodeUri: ./src
+        Events:
+          MyApi:
+            Type: Api
+            Properties:
+              Path: /hello
+              Method: get
+  ```
+- **Command**: Deploy the updated application using SAM CLI.
+  ```bash
+  sam build
+  sam deploy --guided
+  ```
+
+**Example 3: Using Environment Variables**
+
+- **Task**: Modify the Lambda function to use environment variables.
+- **Template**:
+  ```yaml
+  Resources:
+    MyLambdaFunction:
+      Type: "AWS::Serverless::Function"
+      Properties:
+        Handler: index.handler
+        Runtime: nodejs14.x
+        CodeUri: ./src
+        Environment:
+          Variables:
+            ENV_VAR: "HelloWorld"
+  ```
+- **Command**: Deploy the updated application using SAM CLI.
+  ```bash
+  sam build
+  sam deploy --guided
+  ```
+
+---
+
+### **Conclusion**
+
+Through this activity, students will gain practical experience in using AWS CLI to manage AWS resources with CloudFormation and SAM templates. By completing these examples, students will understand how to define infrastructure as code, automate deployments, and manage serverless applications effectively.
