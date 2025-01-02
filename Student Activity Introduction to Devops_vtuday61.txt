@@ -1,0 +1,91 @@
+### Student Activity: Introduction to DevOps
+
+Welcome to the hands-on session on DevOps! In this activity, you'll get practical experience with the core concepts of DevOps, including culture, practices, and tools. Follow the steps below to deepen your understanding of DevOps.
+
+---
+
+### 1. **Understanding DevOps Culture**
+
+**Objective**: Experience the cultural shift in DevOps by practicing collaboration, communication, and shared responsibility.
+
+#### Activity Steps:
+
+1. **Collaboration**:
+   - Form small teams and work on a simple coding project together. Use a shared document or platform to brainstorm ideas and assign tasks.
+   - Practice pair programming with a partner. Take turns writing code and reviewing each other's work.
+
+2. **Communication**:
+   - Set up a communication channel using tools like Slack or Microsoft Teams. Share updates and discuss any challenges you encounter during the project.
+   - Conduct a daily stand-up meeting with your team to discuss progress and any blockers.
+
+3. **Shared Responsibility**:
+   - Assign roles within your team, but ensure everyone is involved in both development and operations tasks.
+   - Conduct a retrospective meeting at the end of the project to discuss what went well and what could be improved.
+
+---
+
+### 2. **DevOps Practices: Continuous Integration (CI) and Continuous Delivery (CD)**
+
+**Objective**: Implement CI/CD practices to automate testing and deployment.
+
+#### Activity Steps:
+
+1. **Continuous Integration (CI)**:
+   - Set up a Git repository for your project and push your code changes regularly.
+   - Integrate a CI tool like Jenkins or GitLab CI to automatically run tests whenever code is pushed to the repository.
+
+2. **Continuous Delivery (CD)**:
+   - Configure your CI tool to automatically deploy the application to a staging environment after successful tests.
+   - Practice rolling back a deployment in case of a failure to understand the importance of CD.
+
+3. **Automated Testing**:
+   - Write unit tests for your code using a testing framework like JUnit or PyTest.
+   - Ensure that your CI pipeline runs these tests automatically and reports any failures.
+
+---
+
+### 3. **Infrastructure as Code (IaC), Monitoring, and Feedback Loops**
+
+**Objective**: Use IaC to manage infrastructure, set up monitoring, and establish feedback loops.
+
+#### Activity Steps:
+
+1. **Infrastructure as Code (IaC)**:
+   - Use Terraform to define and provision a simple infrastructure setup, such as a virtual machine or a web server.
+   - Practice modifying the infrastructure code and applying changes to see how IaC manages updates.
+
+2. **Monitoring**:
+   - Set up a monitoring tool like Prometheus to track metrics of your application, such as CPU usage and response times.
+   - Create alerts for specific thresholds, such as high CPU usage, to be notified of potential issues.
+
+3. **Feedback Loops**:
+   - Collect user feedback through surveys or feedback forms integrated into your application.
+   - Analyze system logs and performance metrics to identify areas for improvement and plan the next iteration of development.
+
+---
+
+### 4. **Hands-on with DevOps Tools**
+
+**Objective**: Familiarize yourself with common DevOps tools and their roles in the DevOps lifecycle.
+
+#### Activity Steps:
+
+1. **Version Control**:
+   - Use Git to clone a repository, make changes, and push updates. Practice branching and merging to manage code changes.
+   - Explore GitHub or GitLab features like pull requests and issue tracking to collaborate with your team.
+
+2. **CI/CD Tools**:
+   - Set up a Jenkins pipeline to automate the build and deployment process of a sample application.
+   - Use GitLab CI to create a simple pipeline that builds, tests, and deploys your code.
+
+3. **Monitoring and Visualization**:
+   - Use Grafana to create a dashboard that visualizes the metrics collected by Prometheus.
+   - Set up CloudWatch to monitor AWS resources and create alarms for specific events.
+
+---
+
+### Conclusion
+
+By completing these activities, you should have a better understanding of how DevOps culture, practices, and tools work together to improve software development and delivery. Remember, the key to DevOps is continuous learning and improvement, so keep experimenting and refining your processes.
+
+Feel free to ask questions or seek help from your trainer as you work through these activities. Happy learning!
