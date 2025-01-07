@@ -1,0 +1,156 @@
+### **Student Activity: Exploring AWS DevOps Services**
+
+Welcome to the hands-on activity session! In this activity, you will practice using AWS DevOps services to manage the application lifecycle. Follow the steps below to gain practical experience with AWS CodeCommit, CodeBuild, CodeDeploy, and other services. This activity is designed for beginners, so take your time and explore each step thoroughly.
+
+---
+
+### **1. Build and Test Services**
+
+#### **AWS CodeCommit: Managed Git Repository Service**
+
+**Example 1: Creating a Repository**
+- **Step 1**: Log in to the AWS Management Console.
+- **Step 2**: Navigate to AWS CodeCommit.
+- **Step 3**: Click on "Create repository" and name your repository (e.g., `MyFirstRepo`).
+- **Step 4**: Add a description and create the repository.
+
+**Example 2: Cloning the Repository**
+- **Step 1**: Install Git on your local machine if not already installed.
+- **Step 2**: Clone the repository using the HTTPS URL provided by AWS CodeCommit.
+  ```bash
+  git clone https://git-codecommit.<region>.amazonaws.com/v1/repos/MyFirstRepo
+  ```
+
+**Example 3: Pushing Code to the Repository**
+- **Step 1**: Create a new file in your local repository (e.g., `hello-world.txt`).
+- **Step 2**: Add the file to the staging area.
+  ```bash
+  git add hello-world.txt
+  ```
+- **Step 3**: Commit the changes.
+  ```bash
+  git commit -m "Add hello-world.txt"
+  ```
+- **Step 4**: Push the changes to AWS CodeCommit.
+  ```bash
+  git push origin main
+  ```
+
+#### **AWS CodeBuild: Fully Managed Continuous Integration Service**
+
+**Example 1: Creating a Build Project**
+- **Step 1**: Navigate to AWS CodeBuild in the AWS Management Console.
+- **Step 2**: Click on "Create build project."
+- **Step 3**: Enter a project name and select the source provider as AWS CodeCommit.
+- **Step 4**: Choose the repository you created earlier.
+
+**Example 2: Configuring Build Settings**
+- **Step 1**: Select a build environment (e.g., Ubuntu, standard image).
+- **Step 2**: Specify the buildspec file (e.g., `buildspec.yml`) or enter inline build commands.
+- **Step 3**: Save the project configuration.
+
+**Example 3: Running a Build**
+- **Step 1**: Start a build by clicking on "Start build."
+- **Step 2**: Monitor the build process and view logs for any errors.
+- **Step 3**: Once the build is successful, review the build artifacts.
+
+---
+
+### **2. Deployment Services**
+
+#### **AWS CodeDeploy: Automating Software Deployments**
+
+**Example 1: Creating a Deployment Application**
+- **Step 1**: Navigate to AWS CodeDeploy in the AWS Management Console.
+- **Step 2**: Click on "Create application."
+- **Step 3**: Name your application and choose the compute platform (e.g., EC2/On-premises).
+
+**Example 2: Setting Up a Deployment Group**
+- **Step 1**: Create a deployment group within your application.
+- **Step 2**: Specify the deployment type (e.g., in-place or blue/green).
+- **Step 3**: Select the target instances for deployment.
+
+**Example 3: Deploying an Application**
+- **Step 1**: Create a deployment by specifying the application and deployment group.
+- **Step 2**: Choose the revision type (e.g., S3 or GitHub) and provide the location of your application files.
+- **Step 3**: Start the deployment and monitor its progress.
+
+#### **AWS Elastic Beanstalk: Platform as a Service (PaaS)**
+
+**Example 1: Creating an Environment**
+- **Step 1**: Navigate to AWS Elastic Beanstalk in the AWS Management Console.
+- **Step 2**: Click on "Create a new environment."
+- **Step 3**: Choose the environment type (e.g., Web server environment).
+
+**Example 2: Deploying an Application**
+- **Step 1**: Upload your application code (e.g., a ZIP file).
+- **Step 2**: Configure environment settings such as instance type and scaling options.
+- **Step 3**: Launch the environment and wait for the deployment to complete.
+
+**Example 3: Monitoring and Managing the Environment**
+- **Step 1**: Use the Elastic Beanstalk dashboard to monitor application health.
+- **Step 2**: View logs and metrics to troubleshoot any issues.
+- **Step 3**: Update the application by uploading a new version.
+
+#### **AWS CloudFormation: Infrastructure as Code (IaC)**
+
+**Example 1: Creating a CloudFormation Stack**
+- **Step 1**: Navigate to AWS CloudFormation in the AWS Management Console.
+- **Step 2**: Click on "Create stack" and choose "With new resources (standard)."
+- **Step 3**: Upload a CloudFormation template file or use a sample template.
+
+**Example 2: Defining Resources in a Template**
+- **Step 1**: Open a text editor and create a YAML or JSON template.
+- **Step 2**: Define AWS resources such as EC2 instances, S3 buckets, etc.
+- **Step 3**: Save the template and use it to create a stack.
+
+**Example 3: Updating a Stack**
+- **Step 1**: Modify the CloudFormation template to add or change resources.
+- **Step 2**: Use the updated template to update the existing stack.
+- **Step 3**: Monitor the update process and ensure resources are configured correctly.
+
+---
+
+### **3. Operate and Monitor Services**
+
+#### **Amazon CloudWatch: Monitoring and Logging**
+
+**Example 1: Creating a CloudWatch Alarm**
+- **Step 1**: Navigate to Amazon CloudWatch in the AWS Management Console.
+- **Step 2**: Click on "Alarms" and then "Create alarm."
+- **Step 3**: Select a metric (e.g., CPU utilization) and set threshold conditions.
+
+**Example 2: Viewing CloudWatch Metrics**
+- **Step 1**: Go to the "Metrics" section in CloudWatch.
+- **Step 2**: Select a namespace (e.g., EC2) to view available metrics.
+- **Step 3**: Create a dashboard to visualize key metrics.
+
+**Example 3: Analyzing CloudWatch Logs**
+- **Step 1**: Navigate to the "Logs" section in CloudWatch.
+- **Step 2**: Select a log group and view log streams.
+- **Step 3**: Use filters to search for specific log events.
+
+#### **AWS X-Ray: Analyzing and Debugging Distributed Applications**
+
+**Example 1: Enabling X-Ray for an Application**
+- **Step 1**: Integrate the AWS X-Ray SDK into your application code.
+- **Step 2**: Configure the X-Ray daemon to run on your instances.
+- **Step 3**: Deploy the application and ensure X-Ray is capturing traces.
+
+**Example 2: Viewing Service Maps**
+- **Step 1**: Navigate to AWS X-Ray in the AWS Management Console.
+- **Step 2**: Click on "Service map" to view the interactions between services.
+- **Step 3**: Analyze the map to identify bottlenecks or errors.
+
+**Example 3: Analyzing Traces**
+- **Step 1**: Go to the "Traces" section in X-Ray.
+- **Step 2**: Select a trace to view detailed information about requests.
+- **Step 3**: Use the trace timeline to identify latency issues.
+
+---
+
+### **Conclusion**
+
+By completing these activities, you have gained hands-on experience with AWS DevOps services. You have learned how to manage code repositories, automate builds, deploy applications, and monitor your infrastructure. These skills are essential for streamlining the software development process and ensuring efficient application management.
+
+Feel free to explore further and experiment with additional features of these AWS services. If you have any questions or need further assistance, don't hesitate to ask!
