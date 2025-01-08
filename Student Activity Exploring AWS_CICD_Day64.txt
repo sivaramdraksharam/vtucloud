@@ -1,0 +1,121 @@
+### Student Activity: Exploring AWS CI/CD Tools
+
+Welcome to the hands-on activity session! Today, you'll get practical experience with AWS services that automate the CI/CD process. Follow the steps below to set up and test a simple CI/CD pipeline using AWS Code services. This activity is designed for beginners, so take your time and explore each step.
+
+---
+
+### **Activity 1: AWS CodeCommit - Storing and Versioning Code**
+
+**Objective**: Learn how to create a repository and manage code using AWS CodeCommit.
+
+#### **Example 1: Create a CodeCommit Repository**
+1. Log in to the AWS Management Console.
+2. Navigate to the CodeCommit service.
+3. Click on "Create repository."
+4. Name your repository (e.g., "MyFirstRepo") and provide a description.
+5. Click "Create" to set up the repository.
+
+#### **Example 2: Clone the Repository Locally**
+1. Install Git on your local machine if you haven't already.
+2. Clone the repository using the HTTPS URL provided by CodeCommit.
+   ```bash
+   git clone https://git-codecommit.<region>.amazonaws.com/v1/repos/MyFirstRepo
+   ```
+3. Navigate into the cloned directory.
+   ```bash
+   cd MyFirstRepo
+   ```
+
+#### **Example 3: Push Code to the Repository**
+1. Create a simple text file (e.g., `hello.txt`) in the repository directory.
+2. Add the file to the Git staging area.
+   ```bash
+   git add hello.txt
+   ```
+3. Commit the changes.
+   ```bash
+   git commit -m "Add hello.txt"
+   ```
+4. Push the changes to CodeCommit.
+   ```bash
+   git push origin main
+   ```
+
+---
+
+### **Activity 2: AWS CodeBuild - Automating the Build Process**
+
+**Objective**: Set up a build project to compile and test your code.
+
+#### **Example 1: Create a CodeBuild Project**
+1. Navigate to the CodeBuild service in the AWS Management Console.
+2. Click "Create build project."
+3. Enter a project name (e.g., "MyFirstBuild").
+4. Select the source provider as "AWS CodeCommit" and choose your repository.
+
+#### **Example 2: Configure Build Environment**
+1. Choose a managed image for the build environment (e.g., Ubuntu).
+2. Select the runtime (e.g., standard:4.0).
+3. Specify the buildspec file (e.g., `buildspec.yml`) or enter build commands directly.
+
+#### **Example 3: Start a Build**
+1. Save the build project configuration.
+2. Click "Start build" to initiate the build process.
+3. Monitor the build logs to ensure the build completes successfully.
+
+---
+
+### **Activity 3: AWS CodeDeploy - Automating the Deployment Process**
+
+**Objective**: Deploy your application to a target environment using AWS CodeDeploy.
+
+#### **Example 1: Create a Deployment Application**
+1. Navigate to the CodeDeploy service.
+2. Click "Create application."
+3. Name your application (e.g., "MyFirstApp") and select the compute platform (e.g., EC2/On-premises).
+
+#### **Example 2: Set Up a Deployment Group**
+1. Create a deployment group within your application.
+2. Specify the deployment settings, such as the target environment (e.g., EC2 instances) and deployment configuration (e.g., rolling updates).
+
+#### **Example 3: Deploy an Application Revision**
+1. Upload an application revision (e.g., a zip file containing your code) to an S3 bucket.
+2. Create a deployment using the uploaded revision.
+3. Monitor the deployment status to ensure it completes successfully.
+
+---
+
+### **Activity 4: AWS CodePipeline - Orchestrating the CI/CD Process**
+
+**Objective**: Create a CI/CD pipeline that integrates CodeCommit, CodeBuild, and CodeDeploy.
+
+#### **Example 1: Create a CodePipeline**
+1. Navigate to the CodePipeline service.
+2. Click "Create pipeline."
+3. Enter a pipeline name (e.g., "MyFirstPipeline") and choose a service role.
+
+#### **Example 2: Add Source, Build, and Deploy Stages**
+1. Add a source stage using your CodeCommit repository.
+2. Add a build stage using your CodeBuild project.
+3. Add a deploy stage using your CodeDeploy application and deployment group.
+
+#### **Example 3: Test the Pipeline**
+1. Make a change to your code in the CodeCommit repository.
+2. Push the changes and observe the pipeline automatically triggering the build and deployment stages.
+3. Verify that the changes are successfully deployed to the target environment.
+
+---
+
+### **Conclusion**
+
+Congratulations! You've successfully set up and tested a CI/CD pipeline using AWS Code services. This hands-on activity has provided you with practical experience in automating the software development lifecycle using AWS. Remember, practice makes perfect, so feel free to experiment further with these services to deepen your understanding.
+
+---
+
+### **Additional Exercises**
+
+1. **Integrate with AWS Lambda**: Modify your pipeline to include a Lambda function that processes data after deployment.
+2. **Containerized Deployment**: Set up a pipeline to deploy a Docker container to Amazon ECS.
+3. **Real-Time Monitoring**: Explore AWS CloudWatch to monitor your pipeline's performance and set up alerts for failures.
+
+By completing these activities, you'll gain a comprehensive understanding of AWS CI/CD tools and how they can enhance your software development process. Happy coding!
