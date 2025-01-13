@@ -1,0 +1,95 @@
+### **Student Activity: Exploring CI/CD Pipelines**
+
+---
+
+Welcome to the hands-on session on CI/CD pipelines! In this activity, you will practice setting up and understanding the different stages of a CI/CD pipeline using AWS services. Follow the steps below and try to complete each task to gain a practical understanding of CI/CD pipelines.
+
+---
+
+### **Activity 1: Understanding the CI/CD Pipeline Stages**
+
+#### **Task 1: Source Stage**
+
+- **Objective**: Learn how to manage source code using a version control system.
+- **Example 1**: Create a new repository in AWS CodeCommit and push a simple "Hello World" application.
+- **Example 2**: Clone an existing repository from GitHub to AWS CodeCommit.
+- **Example 3**: Make a code change in your local repository and push it to CodeCommit.
+
+#### **Task 2: Build Stage**
+
+- **Objective**: Understand how to compile and package code.
+- **Example 1**: Set up a build project in AWS CodeBuild to compile a Java application.
+- **Example 2**: Use CodeBuild to package a Node.js application.
+- **Example 3**: Configure a buildspec.yml file to automate the build process for a Python application.
+
+#### **Task 3: Test Stage**
+
+- **Objective**: Implement automated testing to ensure code quality.
+- **Example 1**: Write unit tests for a Java application and run them using CodeBuild.
+- **Example 2**: Set up integration tests for a Node.js application in CodeBuild.
+- **Example 3**: Use a testing framework like PyTest to test a Python application in CodeBuild.
+
+#### **Task 4: Deploy Stage**
+
+- **Objective**: Deploy code to different environments.
+- **Example 1**: Use AWS CodeDeploy to deploy a web application to an EC2 instance.
+- **Example 2**: Deploy a containerized application to AWS Elastic Beanstalk.
+- **Example 3**: Set up a deployment to AWS Lambda using CodeDeploy.
+
+#### **Task 5: Monitor Stage**
+
+- **Objective**: Monitor the deployed application for performance and errors.
+- **Example 1**: Use AWS CloudWatch to monitor the performance of an EC2 instance.
+- **Example 2**: Set up CloudWatch alarms to notify you of any issues with your application.
+- **Example 3**: Analyze application logs using CloudWatch Logs.
+
+---
+
+### **Activity 2: Building a CI/CD Pipeline with AWS CodePipeline**
+
+#### **Task 1: Define the Pipeline Stages**
+
+- **Objective**: Set up a CI/CD pipeline with defined stages.
+- **Example 1**: Create a new pipeline in AWS CodePipeline with Source, Build, Test, and Deploy stages.
+- **Example 2**: Integrate CodeCommit as the source stage in your pipeline.
+- **Example 3**: Add CodeBuild as the build and test stages in your pipeline.
+
+#### **Task 2: Integrate AWS Services**
+
+- **Objective**: Integrate AWS services into your pipeline.
+- **Example 1**: Use CodeDeploy to deploy your application in the deploy stage.
+- **Example 2**: Configure CodePipeline to use AWS Lambda for custom actions.
+- **Example 3**: Integrate third-party tools like Jenkins with AWS CodePipeline.
+
+#### **Task 3: Configure Automated Triggers**
+
+- **Objective**: Automate the pipeline execution.
+- **Example 1**: Set up a trigger in CodePipeline to start the pipeline when new code is pushed to CodeCommit.
+- **Example 2**: Use CloudWatch Events to trigger the pipeline based on a schedule.
+- **Example 3**: Configure a webhook to trigger the pipeline from an external source.
+
+---
+
+### **Activity 3: Implementing Testing and Rollback Strategies**
+
+#### **Task 1: Automated Testing**
+
+- **Objective**: Ensure code quality with automated tests.
+- **Example 1**: Implement unit tests in CodeBuild for a Java application.
+- **Example 2**: Set up end-to-end tests for a web application using Selenium in CodeBuild.
+- **Example 3**: Use CodeBuild to run security tests on your application.
+
+#### **Task 2: Rollback Strategies**
+
+- **Objective**: Implement safe rollback strategies.
+- **Example 1**: Configure CodeDeploy to automatically roll back to the previous version if a deployment fails.
+- **Example 2**: Use AWS Elastic Beanstalk to manage application versions and roll back if needed.
+- **Example 3**: Implement a blue/green deployment strategy with AWS CodeDeploy to minimize downtime.
+
+---
+
+### **Conclusion**
+
+By completing these activities, you should have a better understanding of how CI/CD pipelines work and how to implement them using AWS services. Remember, practice is key to mastering these concepts, so keep experimenting with different configurations and scenarios to deepen your knowledge.
+
+Happy coding!
