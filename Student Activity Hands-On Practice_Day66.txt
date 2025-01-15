@@ -1,0 +1,95 @@
+### **Student Activity: Hands-On Practice with Amazon CodeGuru**
+
+Welcome to the hands-on session where you'll get to practice using Amazon CodeGuru. This activity is designed to help you understand how to integrate CodeGuru into your development process and leverage its features to improve code quality, security, and performance. Follow the steps below and try out the examples provided for each concept.
+
+---
+
+### **Activity 1: Setting Up CodeGuru Reviewer**
+
+**Objective:** Learn how to set up CodeGuru Reviewer and analyze code for quality and security improvements.
+
+#### **Step-by-Step Guide:**
+
+1. **Access the AWS Management Console:**
+   - Log in to your AWS account.
+   - In the search bar, type "CodeGuru" and select **Amazon CodeGuru**.
+
+2. **Set Up CodeGuru Reviewer:**
+   - Click on **Reviewer** in the CodeGuru console.
+   - Connect your code repository (e.g., GitHub, Bitbucket, AWS CodeCommit).
+   - Authorize CodeGuru to access your repository.
+
+3. **Analyze Code:**
+   - Submit a pull request or commit new code to your repository.
+   - CodeGuru Reviewer will automatically analyze the code and provide feedback.
+
+#### **Examples:**
+
+- **Example 1:** Commit a Java file with duplicate code blocks. Observe how CodeGuru Reviewer identifies and suggests refactoring to eliminate duplication.
+  
+- **Example 2:** Use an outdated library in a Python script. Check how CodeGuru Reviewer flags the library and recommends updating to a secure version.
+  
+- **Example 3:** Write a function with poor readability. See how CodeGuru Reviewer suggests improvements for better code clarity.
+
+---
+
+### **Activity 2: Exploring CodeGuru Profiler**
+
+**Objective:** Understand how to use CodeGuru Profiler to identify performance bottlenecks and optimize applications.
+
+#### **Step-by-Step Guide:**
+
+1. **Set Up CodeGuru Profiler:**
+   - In the CodeGuru console, click on **Profiler**.
+   - Integrate CodeGuru Profiler with your running application (e.g., AWS Lambda, EC2).
+   - Follow the prompts to complete the integration.
+
+2. **Monitor Application Performance:**
+   - Allow CodeGuru Profiler to collect performance data from your application.
+   - Access the Profiler dashboard to view insights on CPU, memory usage, and more.
+
+3. **Optimize Performance:**
+   - Review the performance insights provided by CodeGuru Profiler.
+   - Implement the suggested optimizations to improve application efficiency.
+
+#### **Examples:**
+
+- **Example 1:** Deploy a Java application with a function that consumes excessive CPU time. Use CodeGuru Profiler to identify the function and apply optimization suggestions.
+  
+- **Example 2:** Run a Python script with memory leaks. Observe how CodeGuru Profiler highlights the issue and provides recommendations to fix it.
+  
+- **Example 3:** Analyze an AWS Lambda function with high execution time. Use the insights from CodeGuru Profiler to reduce the execution time and optimize resource usage.
+
+---
+
+### **Activity 3: Integrating CodeGuru into Your Development Workflow**
+
+**Objective:** Learn how to seamlessly integrate CodeGuru into your development lifecycle for continuous improvement.
+
+#### **Step-by-Step Guide:**
+
+1. **Continuous Integration Setup:**
+   - Integrate CodeGuru Reviewer with your CI/CD pipeline to automatically review code during the build process.
+   - Ensure that every pull request triggers a CodeGuru analysis.
+
+2. **Regular Performance Monitoring:**
+   - Schedule regular performance profiling sessions with CodeGuru Profiler.
+   - Use the insights to make iterative improvements to your application.
+
+3. **Feedback Loop:**
+   - Review the recommendations from CodeGuru Reviewer and Profiler regularly.
+   - Incorporate the feedback into your development process for ongoing code quality and performance enhancements.
+
+#### **Examples:**
+
+- **Example 1:** Set up a GitHub Actions workflow to trigger CodeGuru Reviewer analysis on every pull request.
+  
+- **Example 2:** Schedule weekly performance profiling for an EC2-hosted application and review the insights for optimization.
+  
+- **Example 3:** Create a feedback loop where developers review CodeGuru recommendations during code reviews and implement necessary changes.
+
+---
+
+### **Conclusion**
+
+By completing these activities, you should now have a practical understanding of how to use Amazon CodeGuru to enhance your code quality, security, and performance. Remember to regularly integrate CodeGuru into your development workflow to continuously improve your projects. Happy coding!
