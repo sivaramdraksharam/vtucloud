@@ -1,0 +1,77 @@
+### Student Activity: Hands-On Practice with DevOps and Automated Code Reviews
+
+Welcome to the hands-on activity session! In this activity, you will practice integrating Amazon CodeGuru Reviewer into a DevOps pipeline. Follow the steps below to gain practical experience with automated code reviews and understand how they align with DevOps principles.
+
+---
+
+### Activity 1: Understanding DevOps Principles
+
+**Objective**: Familiarize yourself with the key principles of DevOps.
+
+1. **Continuous Integration (CI)**
+   - Example 1: Set up a local Git repository and practice committing code changes frequently.
+   - Example 2: Use a CI tool like Jenkins to automate the build process every time code is pushed to the repository.
+   - Example 3: Explore how to configure a CI pipeline in GitHub Actions to automatically run tests on new code commits.
+
+2. **Continuous Delivery (CD)**
+   - Example 1: Deploy a simple web application to a cloud service like AWS or Heroku using a CD pipeline.
+   - Example 2: Configure a CD pipeline in GitLab CI/CD to automatically deploy code changes to a staging environment.
+   - Example 3: Practice setting up a deployment pipeline in Azure DevOps for a sample application.
+
+3. **Feedback Loops**
+   - Example 1: Implement automated testing using a tool like Selenium to provide immediate feedback on code changes.
+   - Example 2: Set up monitoring tools like Prometheus and Grafana to receive real-time feedback on application performance.
+   - Example 3: Use a code review tool like GitHub Pull Requests to provide feedback on code quality.
+
+4. **Collaboration**
+   - Example 1: Use a collaboration tool like Slack or Microsoft Teams to facilitate communication between development and operations teams.
+   - Example 2: Practice using version control systems like Git to collaborate on code with team members.
+   - Example 3: Participate in a code review session with peers to improve code quality and foster collaboration.
+
+---
+
+### Activity 2: Integrating Amazon CodeGuru Reviewer
+
+**Objective**: Learn how to integrate Amazon CodeGuru Reviewer into your CI/CD pipeline.
+
+1. **Set Up CodeGuru Reviewer**
+   - Example 1: Create a code repository in AWS CodeCommit and link it to CodeGuru Reviewer.
+   - Example 2: Install the CodeGuru Reviewer GitHub app and configure it to review pull requests in a GitHub repository.
+   - Example 3: Explore the CodeGuru Reviewer console to understand its features and settings.
+
+2. **Trigger Automated Code Reviews**
+   - Example 1: Push code changes to your repository and create a pull request to trigger a CodeGuru review.
+   - Example 2: Configure CodeGuru Reviewer to automatically analyze code during the pull request phase in a GitHub repository.
+   - Example 3: Set up a CI/CD pipeline in AWS CodePipeline that includes CodeGuru Reviewer as a stage.
+
+3. **Review Feedback and Improve Code**
+   - Example 1: Analyze the feedback provided by CodeGuru Reviewer and make necessary code improvements.
+   - Example 2: Identify code inefficiencies flagged by CodeGuru and refactor the code for better performance.
+   - Example 3: Address security vulnerabilities highlighted by CodeGuru Reviewer and enhance code security.
+
+---
+
+### Activity 3: Improving Team Collaboration and Code Quality
+
+**Objective**: Enhance team collaboration and code quality using automated feedback.
+
+1. **Consistent Feedback**
+   - Example 1: Ensure all team members receive consistent feedback by standardizing coding guidelines and using CodeGuru Reviewer.
+   - Example 2: Use a linter tool like ESLint to enforce coding standards across the codebase.
+   - Example 3: Implement a code style guide and ensure adherence through automated checks.
+
+2. **Reduced Review Time**
+   - Example 1: Automate repetitive code review tasks using CodeGuru Reviewer to reduce manual review time.
+   - Example 2: Use a tool like SonarQube to automate code quality checks and reduce the burden on manual reviewers.
+   - Example 3: Streamline the code review process by integrating automated testing and feedback tools.
+
+3. **Improved Collaboration**
+   - Example 1: Conduct regular team meetings to discuss code review feedback and address any issues collaboratively.
+   - Example 2: Use a project management tool like Jira to track code review tasks and ensure smooth collaboration.
+   - Example 3: Encourage pair programming sessions to enhance collaboration and knowledge sharing among team members.
+
+---
+
+### Conclusion
+
+By completing these activities, you have gained hands-on experience with DevOps principles and automated code reviews using Amazon CodeGuru Reviewer. You have learned how to integrate CodeGuru into a CI/CD pipeline, improve code quality, and enhance team collaboration. Keep practicing these skills to become proficient in DevOps and automated code reviews.
