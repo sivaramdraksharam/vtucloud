@@ -1,0 +1,111 @@
+### Student Activity: Hands-On Practice with Amazon CodeGuru Reviewer
+
+---
+
+**Objective**: Gain practical experience using Amazon CodeGuru Reviewer to analyze and improve code quality by identifying security vulnerabilities, performance bottlenecks, and best practices violations.
+
+**Time Required**: Approximately 1 hour
+
+---
+
+### **Activity Overview**
+
+In this activity, you will work through a series of exercises designed to help you understand how to use Amazon CodeGuru Reviewer effectively. You will submit code for analysis, review the feedback, and refactor the code based on the recommendations provided by CodeGuru Reviewer.
+
+---
+
+### **Exercise 1: Identifying Security Issues**
+
+**Step 1**: Submit a sample code snippet with potential security vulnerabilities to CodeGuru Reviewer. For example, a code snippet that handles sensitive data without encryption.
+
+**Example 1**: Code that stores passwords in plain text.
+```java
+String password = "mySecretPassword";
+```
+
+**Example 2**: Code that uses weak encryption algorithms.
+```java
+Cipher cipher = Cipher.getInstance("DES");
+```
+
+**Example 3**: Code that exposes sensitive information through logs.
+```java
+System.out.println("User password: " + password);
+```
+
+**Step 2**: Review the feedback provided by CodeGuru Reviewer. Identify the security issues highlighted.
+
+**Step 3**: Refactor the code to address the security vulnerabilities. For example, use strong encryption algorithms and avoid logging sensitive information.
+
+**Step 4**: Resubmit the refactored code to CodeGuru Reviewer for further analysis.
+
+---
+
+### **Exercise 2: Detecting Performance Bottlenecks**
+
+**Step 1**: Submit a sample code snippet with potential performance bottlenecks to CodeGuru Reviewer. For example, a code snippet with inefficient loops.
+
+**Example 1**: Code that iterates over a large dataset multiple times.
+```java
+for (int i = 0; i < data.size(); i++) {
+    for (int j = 0; j < data.size(); j++) {
+        // Process data
+    }
+}
+```
+
+**Example 2**: Code with unnecessary computations inside a loop.
+```java
+for (int i = 0; i < data.size(); i++) {
+    int result = computeExpensiveOperation(data.get(i));
+}
+```
+
+**Example 3**: Code that does not release resources properly.
+```java
+FileInputStream fis = new FileInputStream("file.txt");
+// No fis.close() call
+```
+
+**Step 2**: Review the feedback provided by CodeGuru Reviewer. Identify the performance issues highlighted.
+
+**Step 3**: Refactor the code to address the performance bottlenecks. For example, optimize loops and ensure resources are released properly.
+
+**Step 4**: Resubmit the refactored code to CodeGuru Reviewer for further analysis.
+
+---
+
+### **Exercise 3: Ensuring Best Practices**
+
+**Step 1**: Submit a sample code snippet that may not adhere to best practices to CodeGuru Reviewer. For example, a code snippet with improper error handling.
+
+**Example 1**: Code that catches generic exceptions.
+```java
+try {
+    // Code that may throw an exception
+} catch (Exception e) {
+    e.printStackTrace();
+}
+```
+
+**Example 2**: Code that uses outdated libraries.
+```java
+import org.apache.commons.lang.StringUtils; // Deprecated
+```
+
+**Example 3**: Code that does not follow naming conventions.
+```java
+int myVariable = 10; // Should be camelCase
+```
+
+**Step 2**: Review the feedback provided by CodeGuru Reviewer. Identify the best practices violations highlighted.
+
+**Step 3**: Refactor the code to adhere to best practices. For example, use specific exception handling and update to the latest libraries.
+
+**Step 4**: Resubmit the refactored code to CodeGuru Reviewer for further analysis.
+
+---
+
+### **Conclusion**
+
+By completing these exercises, you will gain hands-on experience in using Amazon CodeGuru Reviewer to identify and resolve common code issues. This practice will help you improve your code quality and ensure that your applications are secure, efficient, and adhere to industry best practices.
