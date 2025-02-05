@@ -1,0 +1,73 @@
+### Student Activity: Practicing Secure Coding Principles
+
+This activity is designed to help beginners understand and apply secure coding principles through hands-on practice. Students will work through examples and exercises to reinforce their understanding of secure coding concepts.
+
+---
+
+### Activity Overview
+
+**Objective:** To practice secure coding techniques and understand common security vulnerabilities.
+
+**Time Required:** Approximately 1 hour
+
+**Materials Needed:** Computer with internet access, a code editor, and access to a web server or local development environment.
+
+---
+
+### Activity Steps
+
+#### Part 1: Understanding Common Security Vulnerabilities
+
+**1. SQL Injection**
+
+- **Example 1:** Create a simple login form that accepts a username and password. Write a SQL query that directly uses user input without validation. Test how an attacker might use `' OR '1'='1` to bypass authentication.
+  
+- **Example 2:** Modify the login form to use parameterized queries or prepared statements to prevent SQL injection. Test the form again to ensure the vulnerability is fixed.
+
+- **Example 3:** Implement input validation to ensure that only valid usernames and passwords are accepted. Test with various inputs to verify the validation.
+
+**2. Cross-Site Scripting (XSS)**
+
+- **Example 1:** Create a web page that displays user comments. Allow users to submit comments with HTML tags. Observe how an attacker might inject a script like `<script>alert('XSS');</script>`.
+
+- **Example 2:** Implement output encoding to escape HTML characters in user comments. Test the page to ensure scripts are not executed.
+
+- **Example 3:** Use a Content Security Policy (CSP) to restrict the execution of scripts on your web page. Test the effectiveness of CSP in preventing XSS attacks.
+
+**3. Cross-Site Request Forgery (CSRF)**
+
+- **Example 1:** Create a form that performs a sensitive action, such as changing a user's email address. Simulate a CSRF attack by submitting the form from another website.
+
+- **Example 2:** Implement CSRF tokens in your form to prevent unauthorized requests. Test the form to ensure that only requests with valid tokens are accepted.
+
+- **Example 3:** Use SameSite cookies to mitigate CSRF attacks. Test the form to verify that cross-site requests are blocked.
+
+---
+
+#### Part 2: Using CodeGuru for Secure Coding
+
+**1. Setting Up CodeGuru**
+
+- **Example 1:** Set up Amazon CodeGuru Reviewer in your development environment. Ensure it is configured to analyze your code repository.
+
+- **Example 2:** Commit code with intentional vulnerabilities (e.g., SQL injection, XSS) to your repository. Run CodeGuru to identify these vulnerabilities.
+
+- **Example 3:** Review CodeGuru's recommendations and apply the suggested fixes to your code. Re-run CodeGuru to confirm that the vulnerabilities are resolved.
+
+---
+
+#### Part 3: Integrating Secure Coding Practices into DevOps
+
+**1. Automating Security Checks**
+
+- **Example 1:** Integrate CodeGuru into your CI/CD pipeline. Configure it to automatically scan code for vulnerabilities on each commit.
+
+- **Example 2:** Simulate a development workflow where a new feature is added. Ensure that CodeGuru scans the code and provides feedback before deployment.
+
+- **Example 3:** Use additional AWS security tools, such as AWS Inspector, to complement CodeGuru's analysis. Review the combined security reports to identify and fix vulnerabilities.
+
+---
+
+### Conclusion
+
+By completing this activity, students will gain practical experience in identifying and mitigating common security vulnerabilities. They will also learn how to use tools like CodeGuru to enhance the security of their code and integrate secure coding practices into their development workflow. Encourage students to continue exploring secure coding techniques and apply them in their future projects.
